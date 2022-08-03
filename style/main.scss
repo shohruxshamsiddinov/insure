@@ -1,0 +1,320 @@
+
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+         url('../fonts/rubik-v20-latin_cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/rubik-v20-latin_cyrillic-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  @font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/rubik-v20-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/rubik-v20-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  @font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/rubik-v20-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/rubik-v20-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/roboto-v30-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/roboto-v30-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+         url('../fonts/roboto-v30-latin_cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/roboto-v30-latin_cyrillic-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+@mixin container {
+    width: 375px;
+    margin: 0 auto;
+}
+@mixin auto{
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+}
+@mixin title_1{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 48px;
+text-align: center;
+letter-spacing: -0.666667px;
+color: #FFFFFF;
+text-decoration: none;
+}
+@mixin text_1{
+    font-family: 'Rubuk';
+font-style: normal;
+font-weight: 700;
+font-size: 13px;
+line-height: 15px;
+text-align: center;
+letter-spacing: 1.5px;
+color: #2D2641;
+}
+@mixin text{
+    font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+text-align: center;
+color: #FFFFFF;
+text-decoration: none;
+}
+@mixin title_2{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 28px;
+line-height: 38px;
+text-align: center;
+letter-spacing: -0.388889px;
+text-decoration: none;
+color: #2C2830;
+
+}
+.header{
+    .container{
+        width: 375px;
+        margin: 0 auto;
+        .head{
+            display: flex;
+            justify-content: space-between;
+            padding-left: 24px;
+            padding-right: 24px;
+            .logo{
+                width: 112px;
+                height: 18px;
+                padding-top: 31px;
+                padding-bottom: 31px;
+            }
+            .table{
+                width: 32px;
+                height: 32px;
+                padding-top: 24px;
+                padding-bottom: 24px
+            }
+        }
+    }
+}
+.main{
+    .img_section{
+        .container{
+            @include container;
+            .section_img{
+                height: 471px;
+                width: 375px;
+            }
+        }
+    }
+    .insurance_section{
+        background: #2D2641;
+        padding-bottom: 93px;
+        .container{
+            @include container;
+            .insurance_title{
+                padding-top: 93px;
+                width: 327px;
+               @include auto;
+               .insurance_title_a{
+                  @include title_1;
+               }
+            }
+            .insurance_text{
+               padding-top: 16px;
+               width: 327px;
+               padding-top: 32px;
+               @include auto;
+               .incurance_text_a{
+                @include text;
+               }
+            }
+             .insurance_link_div{
+                @include auto;
+                padding-top: 32px;
+                .insurance_link{
+                    border: 1.5px solid #FFFFFF;
+                    padding-left: 28px;
+                    padding-right: 28px;
+                    padding-top: 13px;
+                    padding-bottom: 12px;
+                    text-decoration: none;
+                    color: #FFFFFF;
+                }
+                .insurance_link:hover{
+                    border: 2px solid #ef7979;
+                    border-radius: 20px;
+                }
+             }   
+        } 
+    }
+    .different_section{
+        .container{
+            @include container;
+            .different{
+                padding-top:140px ;
+                .different_hr{
+                    width: 150px;
+                    height: 1px;
+                    background: #C396C6;
+                    @include auto;
+                }
+                .different_title{
+                    padding-top: 40px;
+                    @include auto;
+                    .different_title_a{
+                        @include title_1;
+                        color: #2C2830;
+                    }
+                }
+                .different_ul{
+                    padding-top: 24px;
+                    list-style: none;
+                    .different_li{
+                        padding-top: 52px;
+                        .different_img{
+                            @include auto;
+                            width: 86px;
+                            height: 86px;
+                            margin-left: 125px;
+                        }
+                        .different_li_title{
+                            padding-top: 32px;
+                            @include auto;
+                            .different_li_title_a{
+                                @include title_2;
+                            }
+                        }
+                        .different_text{
+                            padding-top: 16px;
+                            @include auto;
+                            width: 327px;
+                            .different_text_a{
+                                @include text;
+                                color: #837D88;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .find_section{
+        padding-top: 140px;
+        padding-bottom: 140px;
+        .container{
+            @include container;
+            .find{
+              padding-bottom: 72px;
+              padding-left: 24px;
+              padding-top: 24px;
+              padding-right: 24px;
+                background: #2D2641;
+
+                .find_title{
+                    @include auto;
+                    padding-top: 72px;
+                    padding-bottom: 40px;
+                    .find_title_a{
+                        @include title_1;
+                    }
+                }
+                .find_link_div{
+                    @include auto;
+                }
+                .find_link{
+                    @include auto;
+                    border: 1.5px solid #FFFFFF;
+                    padding-left: 28px;
+                    padding-right: 28px;
+                    padding-top: 13px;
+                    padding-bottom: 12px;
+                    text-decoration: none;
+                    color: #FFFFFF;
+                }
+                .find_link:hover{
+                    border: 2px solid #e84646;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}
+.footer{
+    background: #FAFAFA;
+    .container{
+        @include container;
+        .insure{
+            .insure_logo{
+                .insure_link_img{
+                    @include auto;
+                    padding-top: 88px;
+                    display: flex;
+                }
+                .insure_logo_ul{
+
+                    padding-bottom: 30px;
+                    list-style: none;
+                    display: flex;
+                    width: 144px;
+                    @include auto;
+                    margin-left: 70px;
+                    padding-top: 32px;
+                    justify-content: space-between;
+                    
+                }
+                .insure_hr{
+                    background: #DADADA;
+                    width: 327px;
+                    height: 1px;
+                    @include auto;
+                }
+            }
+            .insure_ul{
+                list-style: none;
+                padding-bottom: 88px;
+                .insure_li{
+                   .insure_text_1{
+                    @include auto;
+                    padding-top: 40px;
+                    padding-bottom: 35px;
+                    .insure_text_a_1{
+                        @include text;
+                        color: #837D88;
+                    }
+                   }
+                   .insure_text{
+                    @include auto;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    .insure_text_a{
+                        @include text_1;
+                        text-decoration: none;
+                     }
+
+                   }
+                }
+            }
+        }
+    }
+}
